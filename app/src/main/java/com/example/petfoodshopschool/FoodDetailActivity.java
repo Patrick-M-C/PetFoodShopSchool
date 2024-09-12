@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class FoodDetailActivity extends AppCompatActivity {
+public class    FoodDetailActivity extends AppCompatActivity {
 
     private Button addToBasketButton;
     private PetFoodItem currentItem;
