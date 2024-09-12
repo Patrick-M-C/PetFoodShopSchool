@@ -64,14 +64,24 @@ public class MainActivity extends AppCompatActivity {
     // Handle menu item selection (Basket icon)
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_basket:
-                // Open BasketActivity when the basket icon is clicked
-                Intent basketIntent = new Intent(this, BasketActivity.class);
-                startActivity(basketIntent);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        int id = item.getItemId();
+
+        if (id == R.id.menu_basket) {
+            // Open BasketActivity when the basket icon is clicked
+            Intent basketIntent = new Intent(this, BasketActivity.class);
+            startActivity(basketIntent);
+            return true;
+
+        } else if (id == R.id.menu_logout) {
+            // Handle logout button click
+            Intent logoutIntent = new Intent(this, LoginActivity.class);
+            logoutIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(logoutIntent);
+            finish(); // Close MainActivity
+            return true;
         }
+
+        return super.onOptionsItemSelected(item);
     }
+
 }

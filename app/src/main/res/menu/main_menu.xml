@@ -7,4 +7,10 @@
         android:icon="@drawable/ic_basket"
         android:title="Basket"
         app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_logout"
+        android:icon="@drawable/ic_key"
+        android:title="Logout"
+        app:showAsAction="never" />
 </menu>

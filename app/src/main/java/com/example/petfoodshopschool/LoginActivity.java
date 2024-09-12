@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         String username = usernameEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
 
-        if (username.equals("user") && password.equals("password")) {
+        if (username.equals("Admin") && password.equals("Passw0rd")) {
             // Login successful, redirect to MainActivity
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
