@@ -65,7 +65,7 @@ public class BasketActivity extends AppCompatActivity {
 
     // Method to send basket data to the API using Volley
     void createBasketItem() {
-        String url = "http://192.168.0.115:8080/basketitems"; // Update with your API URL
+        String url = "http://192.168.1.7:8080/basketitems"; // Update with your API URL
 
         // Prepare the basket data for submission
         StringRequest request = new StringRequest(
