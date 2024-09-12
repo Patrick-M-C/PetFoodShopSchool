@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Basket icon -->
     <item
         android:id="@+id/menu_basket"
-        android:title="Basket"
         android:icon="@drawable/ic_basket"
+        android:title="Basket"
         app:showAsAction="always" />
 </menu>

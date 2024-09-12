@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         // Initialize the list of food items
         foodItems = new ArrayList<>();
         foodItems.add(new PetFoodItem("Dog Food", "Premium dry and wet food for dogs", 9.99));
-        foodItems.add(new PetFoodItem("Cat Food", "Delicious cat treats for any felian out there", 4.59));
+        foodItems.add(new PetFoodItem("Cat Food", "Delicious cat treats for any feline out there", 4.59));
         foodItems.add(new PetFoodItem("Fish Food", "Nutritious flakes for fish of all kinds", 2.99));
         foodItems.add(new PetFoodItem("Hamster Food", "Got options of both wet and dry food", 4.99));
 
@@ -64,12 +64,14 @@ public class MainActivity extends AppCompatActivity {
     // Handle menu item selection (Basket icon)
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.menu_basket) {
-            // Open BasketActivity when the basket icon is clicked
-            Intent intent = new Intent(this, BasketActivity.class);
-            startActivity(intent);
-            return true;
+        switch (item.getItemId()) {
+            case R.id.menu_basket:
+                // Open BasketActivity when the basket icon is clicked
+                Intent basketIntent = new Intent(this, BasketActivity.class);
+                startActivity(basketIntent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
     }
 }
